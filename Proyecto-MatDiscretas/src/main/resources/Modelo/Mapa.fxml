@@ -11,29 +11,30 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Modelo.MapaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1020.0" styleClass="fondo" stylesheets="@../Estilos/Estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Modelo.MapaController">
    <left>
-      <VBox prefHeight="660.0" prefWidth="225.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="540.0" prefWidth="243.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Punto A" />
-            <TextField fx:id="puntoA" editable="false" />
+            <TextField fx:id="puntoA" editable="false" styleClass="texField" />
             <Label text="Punto B" />
-            <TextField fx:id="puntoB" editable="false" />
-            <Button fx:id="btnCalcular" mnemonicParsing="false" prefHeight="31.0" prefWidth="185.0" text="Calcular">
+            <TextField fx:id="puntoB" editable="false" styleClass="texField" />
+            <Button fx:id="btnCalcular" mnemonicParsing="false" prefHeight="31.0" prefWidth="185.0" styleClass="boton" text="Calcular">
                <VBox.margin>
                   <Insets left="15.0" top="5.0" />
                </VBox.margin>
             </Button>
-            <Label text="Distancia del recorrido:">
+            <Label fx:id="distanciaRecorrido" styleClass="text">
+               <graphic>
+                  <Label styleClass="text" text="Distancia del recorrido:" />
+               </graphic>
                <VBox.margin>
-                  <Insets top="15.0" />
+                  <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="distanciaRecorrido" text="Distancia" />
             <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="btnClear" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" text="Clear" />
+                  <Button fx:id="btnClear" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" styleClass="boton" text="Clear" />
                </children>
             </VBox>
          </children>
@@ -43,18 +44,18 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane fx:id="mapa" prefHeight="508.0" prefWidth="846.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="mapa" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="740.0" styleClass="marcoImagen" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="506.0" fitWidth="840.0" layoutX="3.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="506.0" fitWidth="729.0" layoutX="5.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/Mapa1.PNG" />
                </image>
             </ImageView>
-            <Circle fx:id="circulo4" fill="DODGERBLUE" layoutX="486.0" layoutY="325.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="circulo2" fill="DODGERBLUE" layoutX="496.0" layoutY="261.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="circulo5" fill="DODGERBLUE" layoutX="395.0" layoutY="303.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="circulo1" fill="DODGERBLUE" layoutX="412.0" layoutY="240.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="circulo3" fill="DODGERBLUE" layoutX="521.0" layoutY="303.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo1" fill="DODGERBLUE" layoutX="338.0" layoutY="128.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo2" fill="DODGERBLUE" layoutX="410.0" layoutY="147.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo3" fill="DODGERBLUE" layoutX="483.0" layoutY="167.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo4" fill="DODGERBLUE" layoutX="461.0" layoutY="243.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo5" fill="DODGERBLUE" layoutX="317.0" layoutY="204.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
          <BorderPane.margin>
             <Insets />

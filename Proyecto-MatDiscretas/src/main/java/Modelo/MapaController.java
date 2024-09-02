@@ -154,7 +154,7 @@ public class MapaController implements Initializable {
 
             if( llegada != null ){
                 llegada.setFill(Color.TRANSPARENT);
-                partida.setStroke(Color.TRANSPARENT);
+                llegada.setStroke(Color.TRANSPARENT);
             }
             punto.setFill(Color.RED);
             punto.setStroke(Color.BLACK);

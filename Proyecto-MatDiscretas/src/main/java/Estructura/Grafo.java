@@ -100,7 +100,7 @@ public class Grafo {
     
     public void actualizarMatrices(){
         FloydWarshall.algoritmoFloydWarshall(this);
-        FloydWarshall.printMatrices();
+        FloydWarshall.printMatrices(this);
     }
     
     

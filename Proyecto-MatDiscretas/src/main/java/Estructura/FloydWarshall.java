@@ -77,25 +77,48 @@ public class FloydWarshall {
         }
     }
     
-    public static void printMatrices(){
+    public static void printMatrices(Grafo grafo){
+        
         System.out.println("-> Matriz de Adyacencia");
+        //Esto solo son los nombres de las columnas
+        System.out.print("[");
+        for(Circle c: grafo.getListaDeClaves()){ 
+            System.out.print(c.getId() + "  - ");
+        }
+        System.out.println("] <- Indices fila y columna");
+        
+        //Aqui se imprime la matriz de adyacencia
         for (long[] m : matrizAdyacencia) {
             for(long e: m){
-                System.out.print(String.valueOf(e) + " - ");
+                if(e == INFINITO){
+                    System.out.print("    INF   - ");
+                }else{
+                    System.out.print("    "+String.valueOf(e) + "     -");
+                }
             }
-            System.out.println("");
+            System.out.println();
         }
         System.out.println();
         
         System.out.println("-> Matriz de recorrido");
-         for (Circle[] m : matrizRecorrido) {
-            for(Circle e: m){
-                if(e== null) { System.out.print("null" + " - ");}
-                else{
-                System.out.print(e.getId() + " - ");}
-            }
-            System.out.println("");
+        //Esto solo son los nombres de las columnas
+        System.out.print("[");
+        for(Circle c: grafo.getListaDeClaves()){
+            System.out.print(c.getId() + " - ");
         }
+        System.out.println("] <- Indices fila y columna");
+        
+        //Aqui se imprime la matriz de Recorrido
+        for (Circle[] m : matrizRecorrido) {
+            for(Circle e: m){
+                if(e== null) { System.out.print("  null  " + " - ");}
+                else{
+                System.out.print(e.getId() + " - ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 
 }
