@@ -14,21 +14,16 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    public static final String PATH_FOTOS = "src/main/resources/archivos/fotos/";
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Mapa.fxml"));
+        Parent p = fxmlLoader.load();
+        scene = new Scene(p, 1100, 600);
         stage.setScene(scene);
+        stage.setTitle("Catalogo de Vehiculos");
         stage.show();
-    }
-
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
     }
 
     public static void main(String[] args) {
