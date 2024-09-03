@@ -280,7 +280,7 @@ public class MapaController implements Initializable {
         grafo.addCamino(circulo49, callejon19, 10); // Callejón 19 IDA
         grafo.addCamino(callejon19, circulo49, 10); // Callejón 19 VUELTA
         grafo.addCamino(circulo49, callejon20, 10); // Callejón 20 IDA
-        grafo.addCamino(callejon20, circulo20, 10); // Callejón 20 VUELTA
+        grafo.addCamino(callejon20, circulo49, 10); // Callejón 20 VUELTA
         grafo.addCamino(circulo50, callejon21, 10); // Callejón 21 IDA
         grafo.addCamino(callejon21, circulo50, 10); // Callejón 21 VUELTA
         grafo.addCamino(circulo46, callejon22, 10); // Callejón 22 IDA
