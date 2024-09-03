@@ -1,2 +1,7 @@
 # Proyecto Discretas
-###### ¿Me pueden matar por favor :,)?
+¿Nos pueden matar por favor :,)?
+### Integrantes del proyecto
+- Cecilia Montes
+- Angello Vásconez
+- Nicolás López
+- Nejeh Zouein
