@@ -19,7 +19,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Mapa.fxml"));
         Parent p = fxmlLoader.load();
-        scene = new Scene(p, 1020, 500);
+        scene = new Scene(p, 1020, 560);
         stage.setScene(scene);
         stage.setTitle("Algoritmo Floyd-Warshall");
         stage.show();

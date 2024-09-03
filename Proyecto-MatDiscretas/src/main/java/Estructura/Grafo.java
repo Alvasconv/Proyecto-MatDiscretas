@@ -30,7 +30,7 @@ public class Grafo {
 
         public Vertice(Circle circulo) {
             circulo.setFill(Color.TRANSPARENT);
-            circulo.setStroke(Color.BLACK); //Despues hay que cambiarlo a transparente
+            circulo.setStroke(Color.TRANSPARENT);
             contenido = circulo;
             listaCaminos = new ArrayList<>();
         }
@@ -98,11 +98,10 @@ public class Grafo {
     }
     
     
-    public void actualizarMatrices(){
+    public void aplicarAlgoritmoFloydWarshall(){
         FloydWarshall.algoritmoFloydWarshall(this);
-        FloydWarshall.printMatrices(this);
     }
-    
+   
     
     public long pesoCaminoMasCorto(Circle partida, Circle llegada){
         

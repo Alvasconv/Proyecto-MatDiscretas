@@ -1,21 +1,31 @@
 package Modelo;
 
+import Estructura.FloydWarshall;
 import Estructura.Grafo;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -28,6 +38,8 @@ public class MapaController implements Initializable {
     @FXML TextField puntoB;
     @FXML Button btnCalcular;
     @FXML Button btnClear;
+    @FXML Button btnMatrizAdy;
+    @FXML Button btnMatrizRec;
     @FXML Label distanciaRecorrido;
     @FXML AnchorPane mapa;
     
@@ -136,16 +148,18 @@ public class MapaController implements Initializable {
         }
         
         agregarCaminosGrafo(); //Hay que añadirle todos los caminos entre los grafos manualmente.
+        grafo.aplicarAlgoritmoFloydWarshall();
         dibujar();
         escogerPunto();
         limpiarTodo();
+        tablaAdyacencia();
+        tablaRecorrido();
     }
     
     private void dibujar(){
         btnCalcular.setOnAction((ActionEvent e)-> {
             if( partida!=null && llegada!=null ){
                 try{
-                grafo.actualizarMatrices();
                 grafo.dibujarCaminoMasCorto(partida, llegada, mapa);
                 distanciaRecorrido.setText(" " + grafo.pesoCaminoMasCorto(partida, llegada) + "km" );
                 }
@@ -234,6 +248,38 @@ public class MapaController implements Initializable {
             llegada = punto;
             puntoB.setText(punto.getId());
         }   
+    }
+    
+    public void tablaAdyacencia(){
+        btnMatrizAdy.setOnAction((ActionEvent e)->{
+        
+            TableView <ObservableList<String>> tablaAdyacencia = FloydWarshall.getMatrizAdyTabView(grafo);
+            tablaAdyacencia.setMaxWidth(800);
+            tablaAdyacencia.setMaxHeight(600);
+            HBox hb = new HBox(tablaAdyacencia);
+            hb.setAlignment(Pos.CENTER);
+
+            Scene s = new Scene(hb, 800, 600);
+            Stage stg = new Stage();
+            stg.setScene(s);
+            stg.show();
+        });
+    }
+    
+    public void tablaRecorrido(){
+        btnMatrizRec.setOnAction((ActionEvent e)->{
+        
+            TableView <ObservableList<String>> tablaRecorrido = FloydWarshall.getMatrizRecTabView(grafo);
+            tablaRecorrido.setMaxWidth(800);
+            tablaRecorrido.setMaxHeight(600);
+            HBox hb = new HBox(tablaRecorrido);
+            hb.setAlignment(Pos.CENTER);
+
+            Scene s = new Scene(hb, 800, 600);
+            Stage stg = new Stage();
+            stg.setScene(s);
+            stg.show();
+        });
     }
 
     //Aqui se deben de ir agregando todos los caminos manuamente

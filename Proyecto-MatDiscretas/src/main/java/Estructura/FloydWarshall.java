@@ -2,6 +2,11 @@ package Estructura;
 
 import Estructura.Grafo.Camino;
 import Estructura.Grafo.Vertice;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.shape.Circle;
 
 /**
@@ -77,48 +82,76 @@ public class FloydWarshall {
         }
     }
     
-    public static void printMatrices(Grafo grafo){
+    
+    public static TableView<ObservableList<String>> getMatrizAdyTabView(Grafo grafo){
         
-        System.out.println("-> Matriz de Adyacencia");
-        //Esto solo son los nombres de las columnas
-        System.out.print("[");
-        for(Circle c: grafo.getListaDeClaves()){ 
-            System.out.print(c.getId() + "  - ");
+        TableView<ObservableList<String>> tableView = new TableView<>();
+        
+         // Crear columnas
+        TableColumn<ObservableList<String>, String> columInit = new TableColumn<>("");
+        columInit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().get(0)));
+        tableView.getColumns().add(columInit);
+
+        for (int i = 0; i < grafo.getListaDeClaves().size(); i++) {
+            String tituloColumna = grafo.getListaDeClaves().get(i).getId();
+            final int colInd = i+1;
+            TableColumn<ObservableList<String>, String> column = new TableColumn<>(tituloColumna);
+            column.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().get(colInd)));
+            tableView.getColumns().add(column);
         }
-        System.out.println("] <- Indices fila y columna");
         
-        //Aqui se imprime la matriz de adyacencia
-        for (long[] m : matrizAdyacencia) {
-            for(long e: m){
-                if(e == INFINITO){
-                    System.out.print("    INF   - ");
-                }else{
-                    System.out.print("    "+String.valueOf(e) + "     -");
-                }
+
+        // Llenar la tabla con datos
+        int cont = 0;
+        for (long[] filaDatos : FloydWarshall.matrizAdyacencia) {
+            ObservableList<String> row = FXCollections.observableArrayList();
+            row.add(grafo.getListaDeClaves().get(cont).getId());
+            for ( long dato : filaDatos) {
+                row.add( String.valueOf(dato) );
             }
-            System.out.println();
+            tableView.getItems().add(row);
+            cont++;
         }
-        System.out.println();
-        
-        System.out.println("-> Matriz de recorrido");
-        //Esto solo son los nombres de las columnas
-        System.out.print("[");
-        for(Circle c: grafo.getListaDeClaves()){
-            System.out.print(c.getId() + " - ");
-        }
-        System.out.println("] <- Indices fila y columna");
-        
-        //Aqui se imprime la matriz de Recorrido
-        for (Circle[] m : matrizRecorrido) {
-            for(Circle e: m){
-                if(e== null) { System.out.print("  null  " + " - ");}
-                else{
-                System.out.print(e.getId() + " - ");
-                }
-            }
-            System.out.println();
-        }
-        System.out.println();
+        return tableView;
     }
+    
+    public static TableView<ObservableList<String>> getMatrizRecTabView(Grafo grafo){
+        
+        TableView<ObservableList<String>> tableView = new TableView<>();
+        
+         // Crear columnas
+        TableColumn<ObservableList<String>, String> columInit = new TableColumn<>("");
+        columInit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().get(0)));
+        tableView.getColumns().add(columInit);
+
+        for (int i = 0; i < grafo.getListaDeClaves().size(); i++) {
+            String tituloColumna = grafo.getListaDeClaves().get(i).getId();
+            final int colInd = i+1;
+            TableColumn<ObservableList<String>, String> column = new TableColumn<>(tituloColumna);
+            column.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().get(colInd)));
+            tableView.getColumns().add(column);
+        }
+        
+
+        // Llenar la tabla con datos
+        int cont = 0;
+        for (Circle[] filaDatos : FloydWarshall.matrizRecorrido) {
+            ObservableList<String> row = FXCollections.observableArrayList();
+            row.add(grafo.getListaDeClaves().get(cont).getId());
+            for ( Circle dato : filaDatos) {
+                if(dato == null){
+                    row.add(" - ");
+                }else{
+                    row.add( dato.getId() );
+                }
+            }
+            tableView.getItems().add(row);
+            cont++;
+        }
+        return tableView;
+    }
+        
+    
+    
 
 }
