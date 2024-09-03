@@ -1,1 +1,2 @@
-# Proyecto-MatDiscretas
+# Proyecto Discretas
+###### ¿Me pueden matar por favor :,)?
