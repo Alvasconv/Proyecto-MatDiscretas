@@ -49,6 +49,13 @@ public class MapaController implements Initializable {
     @FXML Circle callejon14;
     @FXML Circle callejon15;
     @FXML Circle callejon16;
+    @FXML Circle callejon17;
+    @FXML Circle callejon18;
+    @FXML Circle callejon19;
+    @FXML Circle callejon20;
+    @FXML Circle callejon21;
+    @FXML Circle callejon22;
+    @FXML Circle callejon23;
 
     // Listado de objetos tipo Círculo (Intersecciones)
 
@@ -94,6 +101,15 @@ public class MapaController implements Initializable {
     @FXML Circle circulo40;
     @FXML Circle circulo41;
     @FXML Circle circulo42;
+    @FXML Circle circulo43;
+    @FXML Circle circulo44;
+    @FXML Circle circulo45;
+    @FXML Circle circulo46;
+    @FXML Circle circulo47;
+    @FXML Circle circulo48;
+    @FXML Circle circulo49;
+    @FXML Circle circulo50;
+    @FXML Circle circulo51;
     
     Grafo grafo;
     private Circle partida = null, llegada = null;
@@ -257,6 +273,20 @@ public class MapaController implements Initializable {
         grafo.addCamino(callejon15, circulo30, 10); // Callejón 15 VUELTA
         grafo.addCamino(circulo35, callejon16, 10); // Callejón 16 IDA
         grafo.addCamino(callejon16, circulo35, 10); // Callejón 16 VUELTA
+        grafo.addCamino(circulo43, callejon17, 10); // Callejón 17 IDA
+        grafo.addCamino(callejon17, circulo43, 10); // Callejón 17 VUELTA
+        grafo.addCamino(circulo48, callejon18, 10); // Callejón 18 IDA
+        grafo.addCamino(callejon18, circulo48, 10); // Callejón 18 VUELTA
+        grafo.addCamino(circulo49, callejon19, 10); // Callejón 19 IDA
+        grafo.addCamino(callejon19, circulo49, 10); // Callejón 19 VUELTA
+        grafo.addCamino(circulo49, callejon20, 10); // Callejón 20 IDA
+        grafo.addCamino(callejon20, circulo20, 10); // Callejón 20 VUELTA
+        grafo.addCamino(circulo50, callejon21, 10); // Callejón 21 IDA
+        grafo.addCamino(callejon21, circulo50, 10); // Callejón 21 VUELTA
+        grafo.addCamino(circulo46, callejon22, 10); // Callejón 22 IDA
+        grafo.addCamino(callejon22, circulo46, 10); // Callejón 22 VUELTA
+        grafo.addCamino(circulo47, callejon23, 10); // Callejón 23 IDA
+        grafo.addCamino(callejon23, circulo47, 10); // Callejón 23 VUELTA
 
         // Añadir camino de las intersecciones
         
@@ -307,6 +337,7 @@ public class MapaController implements Initializable {
         grafo.addCamino(circulo29, circulo25, 15);
         grafo.addCamino(circulo35, circulo34, 20);
         grafo.addCamino(circulo34, circulo33, 20);
+        grafo.addCamino(circulo34, circulo40, 20);
         grafo.addCamino(circulo33, circulo32, 20);
         grafo.addCamino(circulo32, circulo31, 5);
         grafo.addCamino(circulo31, circulo30, 15);
@@ -327,6 +358,21 @@ public class MapaController implements Initializable {
         grafo.addCamino(circulo32, circulo38, 20);
         grafo.addCamino(circulo39, circulo33, 20);
         grafo.addCamino(circulo41, circulo35, 10);
+        grafo.addCamino(circulo48, circulo47, 15);
+        grafo.addCamino(circulo47, circulo46, 15);
+        grafo.addCamino(circulo46, circulo45, 20);
+        grafo.addCamino(circulo47, circulo46, 15);
+        grafo.addCamino(circulo45, circulo44, 10);
+        grafo.addCamino(circulo44, circulo43, 10);
+        grafo.addCamino(circulo38, circulo44, 20);
+        grafo.addCamino(circulo45, circulo39, 10);
+        grafo.addCamino(circulo40, circulo46, 10);
+        grafo.addCamino(circulo42, circulo48, 20);
+        grafo.addCamino(circulo43, circulo49, 15);
+        grafo.addCamino(circulo44, circulo50, 10);
+        grafo.addCamino(circulo51, circulo45, 15);
+        grafo.addCamino(circulo49, circulo50, 5);
+        grafo.addCamino(circulo50, circulo51, 20);
 
     }
 }

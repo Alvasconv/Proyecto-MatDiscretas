@@ -115,6 +115,22 @@
             <Circle fx:id="circulo40" fill="DODGERBLUE" layoutX="135.0" layoutY="314.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="circulo41" fill="DODGERBLUE" layoutX="111.0" layoutY="387.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="circulo42" fill="DODGERBLUE" layoutX="88.0" layoutY="463.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo48" fill="DODGERBLUE" layoutX="16.0" layoutY="442.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo47" fill="DODGERBLUE" layoutX="41.0" layoutY="368.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo46" fill="DODGERBLUE" layoutX="64.0" layoutY="292.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo45" fill="DODGERBLUE" layoutX="88.0" layoutY="215.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo44" fill="DODGERBLUE" layoutX="109.0" layoutY="142.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo43" fill="DODGERBLUE" layoutX="118.0" layoutY="63.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="callejon18" fill="#ff1f1f" layoutX="9.0" layoutY="467.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="callejon17" fill="#ff1f1f" layoutX="123.0" layoutY="10.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="callejon19" fill="#ff1f1f" layoutX="41.0" layoutY="10.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="callejon20" fill="#ff1f1f" layoutX="8.0" layoutY="32.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="callejon21" fill="#ff1f1f" layoutX="8.0" layoutY="114.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="callejon22" fill="#ff1f1f" layoutX="6.0" layoutY="275.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="callejon23" fill="#ff1f1f" layoutX="7.0" layoutY="360.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo51" fill="DODGERBLUE" layoutX="2.0" layoutY="191.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo49" fill="DODGERBLUE" layoutX="38.0" layoutY="40.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo50" fill="DODGERBLUE" layoutX="23.0" layoutY="118.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
          <BorderPane.margin>
             <Insets />
