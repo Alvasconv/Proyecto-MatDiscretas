@@ -87,6 +87,13 @@ public class MapaController implements Initializable {
     @FXML Circle circulo33;
     @FXML Circle circulo34;
     @FXML Circle circulo35;
+    @FXML Circle circulo36;
+    @FXML Circle circulo37;
+    @FXML Circle circulo38;
+    @FXML Circle circulo39;
+    @FXML Circle circulo40;
+    @FXML Circle circulo41;
+    @FXML Circle circulo42;
     
     Grafo grafo;
     private Circle partida = null, llegada = null;
@@ -256,6 +263,7 @@ public class MapaController implements Initializable {
         grafo.addCamino(circulo1, circulo2, 10); 
         grafo.addCamino(circulo1, circulo6, 15);
         grafo.addCamino(circulo2, circulo3, 10);
+        grafo.addCamino(circulo20, circulo19, 10)
         grafo.addCamino(circulo3, circulo4, 20);
         grafo.addCamino(circulo4, circulo5, 5); 
         grafo.addCamino(circulo5, circulo2, 10); 
@@ -308,6 +316,17 @@ public class MapaController implements Initializable {
         grafo.addCamino(circulo33, circulo7, 5);
         grafo.addCamino(circulo10, circulo34, 10);
         grafo.addCamino(circulo35, circulo13, 10);
+        grafo.addCamino(circulo30, circulo36, 10);
+        grafo.addCamino(circulo36, circulo37, 15);
+        grafo.addCamino(circulo37, circulo38, 5);
+        grafo.addCamino(circulo38, circulo39, 15);
+        grafo.addCamino(circulo39, circulo40, 15);
+        grafo.addCamino(circulo40, circulo41, 10);
+        grafo.addCamino(circulo41, circulo42, 10);
+        grafo.addCamino(circulo37, circulo31, 15);
+        grafo.addCamino(circulo32, circulo38, 20);
+        grafo.addCamino(circulo39, circulo33, 20);
+        grafo.addCamino(circulo41, circulo35, 10);
 
     }
 }

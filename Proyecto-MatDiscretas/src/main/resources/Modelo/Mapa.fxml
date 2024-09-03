@@ -108,6 +108,13 @@
             <Circle fx:id="circulo33" fill="DODGERBLUE" layoutX="218.0" layoutY="256.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="circulo34" fill="DODGERBLUE" layoutX="196.0" layoutY="332.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="circulo35" fill="DODGERBLUE" layoutX="174.0" layoutY="406.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo36" fill="DODGERBLUE" layoutX="195.0" layoutY="13.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo37" fill="DODGERBLUE" layoutX="188.0" layoutY="83.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo38" fill="DODGERBLUE" layoutX="174.0" layoutY="161.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo39" fill="DODGERBLUE" layoutX="156.0" layoutY="235.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo40" fill="DODGERBLUE" layoutX="135.0" layoutY="314.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo41" fill="DODGERBLUE" layoutX="111.0" layoutY="387.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circulo42" fill="DODGERBLUE" layoutX="88.0" layoutY="463.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
          <BorderPane.margin>
             <Insets />
